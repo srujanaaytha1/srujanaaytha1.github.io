@@ -1,12 +1,161 @@
 <html >
 <head>
 <title> Github tutorial </title>
+<style>
+    body {
+      background-image: url('background-image.jpg');
+    }
+    .container{
+      display: flex;
+      height : 100px;
+      font-size: larger;
+      justify-content:center;
+      font:bold
+    }
+    .contact {
+        font-style: italic;
+    }
+    .box {
+    width: 50px;
+    height: 30px;
+    border: 3px solid rgb(100, 114, 106);
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    }
+    .box-work {
+      width : 500px;
+      padding: 10px;
+      word-wrap: break-word; 
+      white-space: normal;
+      border-radius: 10px;
+      margin: 10px;
+      border: 3px solid rgb(100, 114, 106);
+    }
+    .flex-container {
+  display: flex;
+  
+}
+    </style>
 </head>
 <body>
-    <h1>Hello!! I am Srujana Aytha. This is my personal blog </h1>
-    <a href="https://srujanaaytha1.github.io/myproject/"> My project 1 </a> 
+    <div style="text-align: center; color:rgb(109, 49, 49);" >
+        <h1 >Hello!! I am Srujana Aytha. </h1>
+        <h4>Full Stack Java developer | BackEnd Developer</h4>
+    </div>
+  
+    <hr>
+    <header>
+        <div class = "container">
+            <div>
+                <a href="">Home | </a>
+                    <a href="#education">Education | </a>
+                    <a href="#work">Work Expirence | </a>
+                    <a href="#projects">Projects | </a>
+                    <a href="#skills" >Skills  |</a>
+                    <a href="#contact">Contact</a>
+            </div>
+           
+        </div>
+    </header>
+    <hr>
+    <div class = "education" id="education">
+        <h1 style="font-style: italic;">Education Details : </h1>
+        <ul>
+          <li> Graduated Masters Degree from <a href="https://www.uta.edu/"> UTA </a> in Dec 2023.</li>
+            <p> Stream: Computer Science Engineering </p>
+          <li> Graduated UnderGrad from <a href="https://www.gpcet.ac.in/"> GPCET</a> in May 2018.</li>
+            <p> Stream: Computer Science Engineering </p>
+        </ul>
+       
 
-    <a href = "https://srujanaaytha1.github.io/Wdm-Phase3/"> WDM Project</a>
+    </div>
+    <hr>
+    <div class = "work" id="work">
+        <h1 style="font-style: italic;">Work Expirence:</h1>
+        <div class="flex-container">
+          <div class = "box-work">
+            <h1>Associate System Engineer</h1>
+            <ul>
+              <li>
+                Involved in requirements gathering and analysis from the existing system. Captured requirements using Use Cases and Sequence Diagrams.
+              </li> 
+              <li> Worked as part of Agile Software Development Methodology including Scrum technology.</li>
+              <li> Worked with Business Analysts in requirement gathering.</li>
+              <li> Being a Java developer, performed requirement analysis, Design, development, integration, testing.</li>
+              <li> Used Object Oriented Programming concepts while developing code.</li>
+              <li> Created test cases using JUNIT.</li>
+              <li>Responsible for developing the UI pages using HTML, CSS, JavaScript, JSON, and AngularJS </li>
+              <li> Developed webpages with page responsiveness by using @media queries.</li>
+            </ul>
+          </div>
+          <div class = "box-work">
+            <h1>BackEnd Developer</h1>
+            <ul>
+              <li>Responsible in developing Spring Boot Microservices from scratch</li>
+              <li>Implemented Spring Boot Microservices to divide the application into various sub modules</li>
+              <li>Worked with Spring annotations like Request Mapping, Auto wired, Qualifier etc.</li>
+              <li>Implemented Data Access Objects (DAO) to access the Oracle database using Spring DAO</li>
+              <li> Used Log4J to print info, warning, and error data on to the logs.</li>
+              <li> Used GIT for repository the Project.</li>
+
+            </ul>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div class = "projects" id="projects">
+        <h1 style="font-style: italic;">Projects:</h1>
+        <a href="https://srujanaaytha1.github.io/myproject/"> My project 1 </a> 
+        <br>
+        <a href = "https://srujanaaytha1.github.io/tic-tac-toe/public/index.html"> tic-tac-toe Project</a>
+    </div>
+    <hr>
+    <div class = "skills" id="skills">  
+        <h1 style="font-style: italic;">Skills:</h1>
+        <div  class="flex-container">
+            <div class="box">
+                Java
+              </div>
+              <div class="box">
+                SQL
+              </div>
+              <div class="box">
+                Spring
+              </div>
+              <div class="box">
+                React
+              </div>
+              <div class="box">
+                JS
+              </div>
+              <div class="box">
+                HTML, CSS
+              </div>
+              <div class="box">
+                AWS
+              </div>
+        </div>
+     
+    </div>
+    <hr>
+   
+ 
+
+
+    <div class="contact" id="contact">
+        <h1>Contact Information: </h1>
+        <p> You can contact me either via mobile or email.</p>
+        <p>Mobile Number: +1-4699225784</p>
+        <p>Email Address: srujanaaytha17@gmail.com</p>
+
+
+        
+        
+    </div>
+
+  
 </body>
 
 </html>
