@@ -109,6 +109,7 @@ color: black;
   height: 100%;
 }
 
+/* Skills CSS   */
 .skills{
   width: 100%;
   height: 85%;
@@ -143,6 +144,13 @@ color: black;
   padding-top: 15px;
 justify-content: left;
 }
+
+.html{
+  width : 100%;
+  padding: 30px;
+}
+
+/* Work experience CSS  */
 
 .work{
   width: 100%;
@@ -196,6 +204,44 @@ justify-content: left;
  .expirence-box h4{
   padding: 10px;
  }
+
+/*Projects styles */
+
+.projects {
+  padding: 20px;
+  width : 100%;
+  height: 100%;
+}
+.projects h1{
+  padding: 10px;
+  padding-top: 88px;
+
+
+}
+.project-container{
+  display: flex;
+}
+.project-image{
+  padding: 20px;
+
+}
+.project-image img {
+  box-shadow: 8px 8px 15px rgb(220, 233, 164);
+  border-radius: 10px;
+}
+
+.project-visit{
+  padding: 20px;
+}
+.project-visit button {
+  border-radius: 10px;
+  padding: 20px;
+}
+.project-visit button:hover{
+  background-color: rgb(220, 233, 164);
+}
+
+
 
 </style>
 
@@ -312,6 +358,37 @@ justify-content: left;
       </div>
      </div>
 
+     <!-- Projects Page -->
+      <div class="projects" id="projects"  >
+       <h1 >Projects</h1>
+          <div class="projects-container" style="display: flex; gap: 15%;">
+                    <div>
+                      <div class="project-image">
+                        <a href="https://github.com/srujanaaytha1/Guess-the-number/" target="_blank">
+                          <img src="guess-my-number.jpg"  width="200" height="200"alt="image" >  
+                        </a>
+                      </div>
+                      <div class="project-visit">
+                        <button onclick="https://github.com/srujanaaytha1/Guess-the-number/">  Visit Game and Enjoy !! </button>
+                        </div>
+                    </div>
+                  
+                  
+                    <div>
+                      <div class="project-image">
+                        <a href="https://github.com/srujanaaytha1/Catch-the-button/" target="_blank">
+                          <img src="catch-the-button.jpg"  width="200" height="200"alt="image" >  
+                        </a>
+                      </div>
+                      <div class="project-visit">
+                        <button >  Visit Game and Enjoy !! </button>
+                        </div>
+                    </div>
+          
+          </div>
+
+      </div>
+
 
     <!-- Skills Page-->
      <div class="skills" id="skills">
@@ -320,82 +397,92 @@ justify-content: left;
         <div class="skills-main-container">
             <div class="skills-list">
               <img src="html.jpg" alt="HTML/HTML5" class="skills-icon">
-              <h3>
-                <a href="#Html">HTML , CSS , JS</a>
-              </h3>
+              <div>
+                <a href="#Html" onclick="showHtml()">HTML , CSS , JS</a>
+              </div>
+                
             </div>
             <div class="skills-list">
               <img src="java.png" alt="JAVA" class="skills-icon">
               <h3 >
-                <a href="#Java">JAVA</a>
+                <a href="#Java" onclick="showJava()">JAVA</a>
               </h3>
             </div>
             <div class="skills-list">
               <img src="spring.png" alt="Spring" class="skills-icon">
               <h3>
-                <a href="#Spring">Spring</a>
+                <a href="#Spring" onclick="showSpring()">Spring</a>
               </h3>
             </div>
             <div class="skills-list">
               <img src="react.png" alt="react" class="skills-icon">
               <h3>
-                <a href="#React">REACT</a>
+                <a href="#React" onclick="showReact()">REACT</a>
               </h3>
             </div>
             <div class="skills-list">
               <img src="sql.png" alt="sql" class="skills-icon">
               <h3>
-                <a href="#Sql">SQL</a>
+                <a href="#Sql" onclick="showSql()">SQL</a>
               </h3>
             </div>
             <div class="skills-list">
               <img src="mongodb.png" alt="mongodb" class="skills-icon">
               <h3>
-                <a href="#MongoDb">MongoDB</a>
+                <a href="#MongoDb" onclick="showMongodb()">MongoDB</a>
               </h3>
             </div>
           </div>
-          
-          <div class ="html" id="#Html">
-            <p>
-              I have expirence working with html , css ,js .
-            </p>
-          </div>
-
-          
-          <div class ="java" id="#Java">
-            <p>
-              I have expirence working with java for 6 years.
-            </p>
-          </div>
-
-                   
-          <div class ="spring" id="#Spring">
-            <p>
-              I have expirence working with Spring for 3 years.
-            </p>
-          </div>
-                   
-          <div class ="react" id="#React">
-            <p>
-              I have expirence working with react for 3 years.
-            </p>
-          </div>
-                   
-          <div class ="sql" id="#Sql">
-            <p>
-              I have expirence working with sql for 6 years.
-            </p>
-          </div>
-                   
-          <div class ="mongodb" id="#MongoDb">
-            <p>
-              I have expirence working with java for 6 years.
-            </p>
-          </div>
-
-      </div>
+        </div>
      
-    </div>
-    </body>
-    </html>
+      </div>
+
+
+      </body>
+      </html>
+
+          <!-- <div id="displayHtml" class ="html"></div>
+          <div id="displayJava" class ="html"></div>
+          <div id="displaySpring" class ="html"></div>
+          <div id="displayReact" class ="html"></div>
+          <div id="displaySql" class ="html"></div>
+          <div id="displayMongodb" class ="html"></div>
+
+          <script>
+            function showHtml() {
+                const displayElement = document.getElementById('displayHtml');
+                displayElement.textContent = "Embracing the journey of continuous learning, we often discover that each step forward broadens our horizons and deepens our understanding of the world. Knowledge is not just a tool for personal growth but a bridge that connects us to new ideas, cultures, and perspectives. In a world that changes at lightning speed, the ability to adapt and grow is a treasure. So, whether you're diving into the complexities of coding or exploring the wonders of art, remember that every effort to learn enriches your life in unimaginable ways.";
+            }
+        </script>
+         <script>
+          function showJava() {
+              const displayElement = document.getElementById('displayJava');
+              displayElement.textContent = "Embracing the journey of continuous learning of displayJava, we often discover that each step forward broadens our horizons and deepens our understanding of the world. Knowledge is not just a tool for personal growth but a bridge that connects us to new ideas, cultures, and perspectives. In a world that changes at lightning speed, the ability to adapt and grow is a treasure. So, whether you're diving into the complexities of coding or exploring the wonders of art, remember that every effort to learn enriches your life in unimaginable ways.";
+          }
+      </script>
+      <script>
+        function showSpring() {
+            const displayElement = document.getElementById('displaySpring');
+            displayElement.textContent = "Embracing the journey of continuous learning of Spring, we often discover that each step forward broadens our horizons and deepens our understanding of the world. Knowledge is not just a tool for personal growth but a bridge that connects us to new ideas, cultures, and perspectives. In a world that changes at lightning speed, the ability to adapt and grow is a treasure. So, whether you're diving into the complexities of coding or exploring the wonders of art, remember that every effort to learn enriches your life in unimaginable ways.";
+        }
+    </script>
+    <script>
+      function showReact() {
+          const displayElement = document.getElementById('displayReact');
+          displayElement.textContent = "Embracing the journey of continuous learning of React, we often discover that each step forward broadens our horizons and deepens our understanding of the world. Knowledge is not just a tool for personal growth but a bridge that connects us to new ideas, cultures, and perspectives. In a world that changes at lightning speed, the ability to adapt and grow is a treasure. So, whether you're diving into the complexities of coding or exploring the wonders of art, remember that every effort to learn enriches your life in unimaginable ways.";
+      }
+  </script>
+  <script>
+    function showSql() {
+        const displayElement = document.getElementById('displaySql');
+        displayElement.textContent = "Embracing the journey of continuous learning of Sql, we often discover that each step forward broadens our horizons and deepens our understanding of the world. Knowledge is not just a tool for personal growth but a bridge that connects us to new ideas, cultures, and perspectives. In a world that changes at lightning speed, the ability to adapt and grow is a treasure. So, whether you're diving into the complexities of coding or exploring the wonders of art, remember that every effort to learn enriches your life in unimaginable ways.";
+    }
+</script>
+<script>
+  function showMongodb() {
+      const displayElement = document.getElementById('displayMongodb');
+      displayElement.textContent = "Embracing the journey of continuous learning of Mongodb, we often discover that each step forward broadens our horizons and deepens our understanding of the world. Knowledge is not just a tool for personal growth but a bridge that connects us to new ideas, cultures, and perspectives. In a world that changes at lightning speed, the ability to adapt and grow is a treasure. So, whether you're diving into the complexities of coding or exploring the wonders of art, remember that every effort to learn enriches your life in unimaginable ways.";
+  }
+</script> -->
+
+  
