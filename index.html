@@ -1,162 +1,401 @@
-<html >
+<html>
 <head>
 <title> Github tutorial </title>
 <style>
-    body {
-      background-image: url('background-image.jpg');
-    }
-    .container{
-      display: flex;
-      height : 100px;
-      font-size: larger;
-      justify-content:center;
-      font:bold
-    }
-    .contact {
-        font-style: italic;
-    }
-    .box {
-    width: 50px;
-    height: 30px;
-    border: 3px solid rgb(100, 114, 106);
-    padding: 5px;
-    margin: 10px;
-    text-align: center;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+/* Navbar styling */
+.nav{
+    position:fixed;
+    height: 80px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 5px 50px;
+    background-color: rgb(180, 141, 206);
+
+}
+.nav-h1 span{
+    color: rgb(220, 233, 164);
+}
+.nav-h1:hover{
+    color:rgb(220, 233, 164);
+}
+.nav-h1{
+    color:black
+}
+.nav-options .home{
+   color:rgb(220, 233, 164);
+
+}
+.nav-options .home:hover{
+   color: black;
+ }
+
+.nav-options a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-left: 40px;
+    font-weight: 600;
+}
+
+.nav-options a:hover{
+    color: rgb(220, 233, 164);   
+}
+
+.nav-btn button{
+    height: 40px;
+    width: 150px;
+    background-color: black;
     border-radius: 10px;
-    }
-    .box-work {
-      width : 500px;
-      padding: 10px;
-      word-wrap: break-word; 
-      white-space: normal;
-      border-radius: 10px;
-      margin: 10px;
-      border: 3px solid rgb(100, 114, 106);
-    }
-    .flex-container {
-  display: flex;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(180, 141, 206);
+}
+
+.nav-btn button:hover{
+
+background-color:rgb(180, 141, 206);
+color: black;
   
 }
-    </style>
+.main-div {
+  height : 100%;
+  width : 100%;
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-weight: normal; 
+}
+
+.main-left{
+  height: 100%;
+  width: 50%;
+  margin : 11%;
+}
+
+.main-left h4{
+  padding: 1%;
+  font-size: 15px;
+}
+
+.main-left h1{
+ color: rgb(180, 141, 206);
+}
+.main-left h1:hover{
+  color: rgb(220, 233, 164);
+}
+
+.main-left h3{
+  font-size: 20px;
+  font-style: oblique;
+}
+.main-right{
+  height: 100%;
+}
+
+.skills{
+  width: 100%;
+  height: 85%;
+}
+.skills-main h1{
+  padding-left: 30px;
+  /* padding-top: -70px; */
+}
+.skills-main-container{
+  display: grid;
+  grid-template-columns: repeat(6,1fr); /* Fixed 4-column layout */
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left:30px;
+}
+.skills-list img {
+ width: 100px
+}
+
+.skills-list a{
+  color: black;
+  border: none;
+  text-decoration: none;
+  text-align: left;
+}
+.skills-list a:hover{
+  color: rgb(180, 141, 206);
+  border: none;
+}
+.skills-name{
+  padding-top: 15px;
+justify-content: left;
+}
+
+.work{
+  width: 100%;
+  height: 130%;
+  
+}
+.work h1{
+  padding-left: 20px;
+  padding-top: 88px;
+}
+
+
+.work-main{
+  display: flex;
+  height: 300px;
+  width: 100%;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+ 
+  
+}
+ .expirence-box{
+    height: 500px;
+    width: 1000px;
+    background-color: beige;
+    color:  rgb(180, 141, 206);
+    border-radius: 20px;
+    scale: 0.90;
+    transition: scale 1s 1s ease-in;
+    align-items: center; 
+    justify-content: center; 
+ }
+
+ .expirence-box h3 {
+  font-size: 35px;
+  padding-left: 20px;
+  font-style: Open Sans;
+ }
+ .expirence-box h6{
+  text-align: right;
+  font-size: 20px;
+ }
+ .expirence-box ul {
+  font-size: 20px;
+  padding-left: 30px;
+ }
+ .expirence-box h5{
+  padding:10px;
+ }
+ .expirence-box h4{
+  padding: 10px;
+ }
+
+</style>
+
 </head>
 <body>
-    <div style="text-align: center; color:rgb(109, 49, 49);" >
-        <h1 >Hello!! I am Srujana Aytha. </h1>
-        <h4>Full Stack Java developer | BackEnd Developer</h4>
+
+  <!-- Nav bar code -->
+  <div class="nav">
+    <div class="nav-h1">
+      <h1>Srujana Aytha</h1>
     </div>
-  
-    <hr>
-    <header>
-        <div class = "container">
-            <div>
-                <a href="">Home | </a>
-                    <a href="#education">Education | </a>
-                    <a href="#work">Work Expirence | </a>
-                    <a href="#projects">Projects | </a>
-                    <a href="#skills" >Skills  |</a>
-                    <a href="#contact">Contact</a>
+    <div class="nav-options">
+      <a href="#home" class="home">Home</a>
+      <a href="#work">Work Expirence</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills" >Skills</a>
+      <a href="#aboutMe">About Me</a>
+    </div>
+    <!-- Nav Bar -->
+    <div class="nav-btn">
+     <a href="#contactMe"><button>Contact Me</button></a>
+    </div>
+  </div>
+
+    <!--Home page code -->
+    <div class = "main-div">
+      <div class = "main-left">
+        <h4> I am Srujana Aytha</h4> 
+        <h1>Full Stack Java Developer | Backend Developer</h1>
+        <h3> I am currently working in HealthCare as Full stack developer.Our Main goal is to provide services to web portal for patients to access their reports.</h3>
+      </div>
+      <div class ="main-right">
+        <img src="image1.gif" alt=" GIF "/>
+      </div>
+    </div>
+
+    <!-- Work Experience Page-->
+     <div class="work"  id="work">
+      <h1>Work Experience</h1>
+      <div class="work-main">
+        <div class="expirence-box">
+          <h3>Full Stack java Developer</h3>
+          <h6>Dec 2023 - Till Date </h6>
+          <h5>Client : E Health Line Inc., NY</h5>
+          <h4>Responsibilites: </h4>
+          <ul>
+            <li>
+              Being a Java developer, performed requirement analysis, Design, development, integration, testing.
+            </li>
+            <li>
+              Used Object Oriented Programming concepts while developing code. 
+            </li>
+            <li>
+              Created test cases using JUNIT.
+            </li>
+            <li>
+              Responsible for developing the UI pages using HTML, CSS, JavaScript, JSON, and AngularJS. 
+            </li>
+            <li>
+              Developed webpages with page responsiveness by using @media queries.   
+            </li>
+          </ul> 
+          </div>
+        <div class="expirence-box">
+          <h3> Associate System Engineer</h3>
+          <h6>Sep 2018 - May 2021 </h6>
+          <h5>Client: Pitney Bowes</h5>
+          <h4>Responsibilites: </h4>
+          <ul>
+            <li>
+              Being a Java developer, performed requirement analysis, Design, development, integration, testing.
+            </li>
+            <li>
+              Used Object Oriented Programming concepts while developing code. 
+            </li>
+            <li>
+              Created test cases using JUNIT.
+            </li>
+            <li>
+              Responsible for developing the UI pages using HTML, CSS, JavaScript, JSON, and AngularJS. 
+            </li>
+            <li>
+              Developed webpages with page responsiveness by using @media queries.   
+            </li>
+          </ul> 
+
+            </p>
+        </div>
+        <div class="expirence-box">
+          <h3>Backend Developer</h3>
+          <h6>June 2016 - July 2018</h6>
+          <h5>Client : Level App</h5>
+          <h4>Responsibilites: </h4>
+          <ul>
+            <li>
+              Being a Java developer, performed requirement analysis, Design, development, integration, testing.
+            </li>
+            <li>
+              Used Object Oriented Programming concepts while developing code. 
+            </li>
+            <li>
+              Created test cases using JUNIT.
+            </li>
+            <li>
+              Responsible for developing the UI pages using HTML, CSS, JavaScript, JSON, and AngularJS. 
+            </li>
+            <li>
+              Developed webpages with page responsiveness by using @media queries.   
+            </li>
+          </ul> 
+
+        </div>
+
+      </div>
+     </div>
+
+
+    <!-- Skills Page-->
+     <div class="skills" id="skills">
+      <div class="skills-main">
+        <h1>Skills</h1>
+        <div class="skills-main-container">
+            <div class="skills-list">
+              <img src="html.jpg" alt="HTML/HTML5" class="skills-icon">
+              <h3>
+                <a href="#Html">HTML , CSS , JS</a>
+              </h3>
             </div>
-           
-        </div>
-    </header>
-    <hr>
-    <div class = "education" id="education">
-        <h1 style="font-style: italic;">Education Details : </h1>
-        <ul>
-          <li> Graduated Masters Degree from <a href="https://www.uta.edu/"> UTA </a> in Dec 2023.</li>
-            <p> Stream: Computer Science Engineering </p>
-          <li> Graduated UnderGrad from <a href="https://www.gpcet.ac.in/"> GPCET</a> in May 2018.</li>
-            <p> Stream: Computer Science Engineering </p>
-        </ul>
-       
-
-    </div>
-    <hr>
-    <div class = "work" id="work">
-        <h1 style="font-style: italic;">Work Expirence:</h1>
-        <div class="flex-container">
-          <div class = "box-work">
-            <h1>Associate System Engineer</h1>
-            <ul>
-              <li>
-                Involved in requirements gathering and analysis from the existing system. Captured requirements using Use Cases and Sequence Diagrams.
-              </li> 
-              <li> Worked as part of Agile Software Development Methodology including Scrum technology.</li>
-              <li> Worked with Business Analysts in requirement gathering.</li>
-              <li> Being a Java developer, performed requirement analysis, Design, development, integration, testing.</li>
-              <li> Used Object Oriented Programming concepts while developing code.</li>
-              <li> Created test cases using JUNIT.</li>
-              <li>Responsible for developing the UI pages using HTML, CSS, JavaScript, JSON, and AngularJS </li>
-              <li> Developed webpages with page responsiveness by using @media queries.</li>
-            </ul>
+            <div class="skills-list">
+              <img src="java.png" alt="JAVA" class="skills-icon">
+              <h3 >
+                <a href="#Java">JAVA</a>
+              </h3>
+            </div>
+            <div class="skills-list">
+              <img src="spring.png" alt="Spring" class="skills-icon">
+              <h3>
+                <a href="#Spring">Spring</a>
+              </h3>
+            </div>
+            <div class="skills-list">
+              <img src="react.png" alt="react" class="skills-icon">
+              <h3>
+                <a href="#React">REACT</a>
+              </h3>
+            </div>
+            <div class="skills-list">
+              <img src="sql.png" alt="sql" class="skills-icon">
+              <h3>
+                <a href="#Sql">SQL</a>
+              </h3>
+            </div>
+            <div class="skills-list">
+              <img src="mongodb.png" alt="mongodb" class="skills-icon">
+              <h3>
+                <a href="#MongoDb">MongoDB</a>
+              </h3>
+            </div>
           </div>
-          <div class = "box-work">
-            <h1>BackEnd Developer</h1>
-            <ul>
-              <li>Responsible in developing Spring Boot Microservices from scratch</li>
-              <li>Implemented Spring Boot Microservices to divide the application into various sub modules</li>
-              <li>Worked with Spring annotations like Request Mapping, Auto wired, Qualifier etc.</li>
-              <li>Implemented Data Access Objects (DAO) to access the Oracle database using Spring DAO</li>
-              <li> Used Log4J to print info, warning, and error data on to the logs.</li>
-              <li> Used GIT for repository the Project.</li>
-
-            </ul>
+          
+          <div class ="html" id="#Html">
+            <p>
+              I have expirence working with html , css ,js .
+            </p>
           </div>
-        </div>
-    </div>
-    <hr>
-    <div class = "projects" id="projects">
-        <h1 style="font-style: italic;">Projects:</h1>
-        <a href="https://srujanaaytha1.github.io/myproject/"> My project 1 </a> 
-        <br>
-        <a href = "https://srujanaaytha1.github.io/tic-tac-toe/"> tic-tac-toe Project</a>
-    </div>
-    <hr>
-    <div class = "skills" id="skills">  
-        <h1 style="font-style: italic;">Skills:</h1>
-        <div  class="flex-container">
-            <div class="box">
-                Java
-              </div>
-              <div class="box">
-                SQL
-              </div>
-              <div class="box">
-                Spring
-              </div>
-              <div class="box">
-                React
-              </div>
-              <div class="box">
-                JS
-              </div>
-              <div class="box">
-                HTML, CSS
-              </div>
-              <div class="box">
-                AWS
-              </div>
-        </div>
+
+          
+          <div class ="java" id="#Java">
+            <p>
+              I have expirence working with java for 6 years.
+            </p>
+          </div>
+
+                   
+          <div class ="spring" id="#Spring">
+            <p>
+              I have expirence working with Spring for 3 years.
+            </p>
+          </div>
+                   
+          <div class ="react" id="#React">
+            <p>
+              I have expirence working with react for 3 years.
+            </p>
+          </div>
+                   
+          <div class ="sql" id="#Sql">
+            <p>
+              I have expirence working with sql for 6 years.
+            </p>
+          </div>
+                   
+          <div class ="mongodb" id="#MongoDb">
+            <p>
+              I have expirence working with java for 6 years.
+            </p>
+          </div>
+
+      </div>
      
     </div>
-    <hr>
-   
- 
-
-
-    <div class="contact" id="contact">
-        <h1>Contact Information: </h1>
-        <p> You can contact me either via mobile or email.</p>
-        <p>Mobile Number: +1-4699225784</p>
-        <p>Email Address: srujanaaytha17@gmail.com</p>
-
-
-        
-        
-    </div>
-
-  
-</body>
-
-</html>
-
+    </body>
+    </html>
