@@ -1,270 +1,7 @@
 <html>
 <head>
 <title> Github tutorial </title>
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html{
-    height: 100%;
-    width: 100%;
-    scroll-behavior: smooth;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-
-/* Navbar styling */
-.nav{
-    position:fixed;
-    height: 80px;
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content:space-between;
-    padding: 5px 50px;
-    background-color: rgb(180, 141, 206);
-
-}
-.nav-h1 span{
-    color: rgb(220, 233, 164);
-}
-.nav-h1:hover{
-    color:rgb(220, 233, 164);
-}
-.nav-h1{
-    color:black
-}
-.nav-options .home{
-   color:rgb(220, 233, 164);
-
-}
-.nav-options .home:hover{
-   color: black;
- }
-
-.nav-options a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    margin-left: 40px;
-    font-weight: 600;
-}
-
-.nav-options a:hover{
-    color: rgb(220, 233, 164);   
-}
-
-.nav-btn button{
-    height: 40px;
-    width: 150px;
-    background-color: black;
-    border-radius: 10px;
-    border: none;
-    font-size: 17px;
-    font-weight: 500;
-    cursor: pointer;
-    color: rgb(180, 141, 206);
-}
-
-.nav-btn button:hover{
-
-background-color:rgb(180, 141, 206);
-color: black;
-  
-}
-.main-div {
-  height : 100%;
-  width : 100%;
-  display: flex;
-  font-family: Arial, sans-serif;
-  font-weight: normal; 
-}
-
-.main-left{
-  height: 100%;
-  width: 50%;
-  margin : 11%;
-}
-
-.main-left h4{
-  padding: 1%;
-  font-size: 15px;
-}
-
-.main-left h1{
- color: rgb(180, 141, 206);
-}
-.main-left h1:hover{
-  color: rgb(220, 233, 164);
-}
-
-.main-left h3{
-  font-size: 20px;
-  font-style: oblique;
-}
-.main-right{
-  height: 100%;
-}
-.download-section {
-    text-align: center;
-    margin-top: 20px;
-    margin-right: 509px;
-}
-
-.download-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color:  rgb(180, 141, 206);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.download-btn:hover {
-    background-color: rgb(220, 233, 164) ;
-}
-
-
-/* Skills CSS   */
-.skills{
-  width: 100%;
-  height: 85%;
-}
-.skills-main h1{
-  padding-left: 30px;
-  /* padding-top: -70px; */
-}
-.skills-main-container{
-  display: grid;
-  grid-template-columns: repeat(6,1fr); /* Fixed 4-column layout */
-  gap: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left:30px;
-}
-.skills-list img {
- width: 100px
-}
-
-.skills-list a{
-  color: black;
-  border: none;
-  text-decoration: none;
-  text-align: left;
-}
-.skills-list a:hover{
-  color: rgb(180, 141, 206);
-  border: none;
-}
-.skills-name{
-  padding-top: 15px;
-justify-content: left;
-}
-
-.html{
-  width : 100%;
-  padding: 30px;
-}
-
-/* Work experience CSS  */
-
-.work{
-  width: 100%;
-  height: 130%;
-  
-}
-.work h1{
-  padding-left: 20px;
-  padding-top: 88px;
-}
-
-
-.work-main{
-  display: flex;
-  height: 300px;
-  width: 100%;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
- 
-  
-}
- .expirence-box{
-    height: 500px;
-    width: 1000px;
-    background-color: beige;
-    color:  rgb(180, 141, 206);
-    border-radius: 20px;
-    scale: 0.90;
-    transition: scale 1s 1s ease-in;
-    align-items: center; 
-    justify-content: center; 
- }
-
- .expirence-box h3 {
-  font-size: 35px;
-  padding-left: 20px;
-  font-style: Open Sans;
- }
- .expirence-box h6{
-  text-align: right;
-  font-size: 20px;
- }
- .expirence-box ul {
-  font-size: 20px;
-  padding-left: 30px;
- }
- .expirence-box h5{
-  padding:10px;
- }
- .expirence-box h4{
-  padding: 10px;
- }
-
-/*Projects styles */
-
-.projects {
-  padding: 20px;
-  width : 100%;
-  height: 100%;
-}
-.projects h1{
-  padding: 10px;
-  padding-top: 88px;
-
-
-}
-.project-container{
-  display: flex;
-}
-.project-image{
-  padding: 20px;
-
-}
-.project-image img {
-  box-shadow: 8px 8px 15px rgb(220, 233, 164);
-  border-radius: 10px;
-}
-
-.project-visit{
-  padding: 20px;
-}
-.project-visit button {
-  border-radius: 10px;
-  padding: 20px;
-}
-.project-visit button:hover{
-  background-color: rgb(220, 233, 164);
-}
-
-
-
-</style>
+<link rel="stylesheet" href="styles.css" />
 
 </head>
 <body>
@@ -272,14 +9,14 @@ justify-content: left;
   <!-- Nav bar code -->
   <div class="nav">
     <div class="nav-h1">
-      <h1>Srujana Aytha</h1>
+      <h1> <a href = "#home" class="name" >Srujana Aytha </a></h1>
     </div>
     <div class="nav-options">
       <a href="#home" class="home">Home</a>
       <a href="#work">Work Expirence</a>
       <a href="#projects">Projects</a>
       <a href="#skills" >Skills</a>
-      <a href="#aboutMe">About Me</a>
+     
     </div>
     <!-- Nav Bar -->
     <div class="nav-btn">
@@ -288,7 +25,7 @@ justify-content: left;
   </div>
 
     <!--Home page code -->
-    <div class = "main-div">
+    <div class = "main-div" id="home">
       <div class = "main-left">
         <h4> I am Srujana Aytha</h4> 
         <h1>Full Stack Java Developer | Backend Developer</h1>
@@ -471,6 +208,50 @@ justify-content: left;
           </div>
         </div>
      
+      </div>
+
+      <!-- Contact Me Code-->
+         <!-- Contact Me Section -->
+      <div class="contact" id="contactMe">
+        <div class="contact-left">
+            <div class="contact-left-h1">
+                <h1>Contact Me</h1>
+            </div>
+
+            <div class="contact-left-email">
+                <img src="gmail-icon.svg" class="gmail-icon">
+                <span>srujanaaytha17@gmail.com</span>
+            </div> 
+          
+            <div class="contact-left-phone">
+                 <i class="ri-phone-line"></i>
+                 <span>+1 *******784</span>
+            </div>
+
+            <div class="contact-left-social"> 
+                <a href="https://www.linkedin.com/in/srujana-aytha-761450128/" target="_blank" class="about-link">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a href="https://github.com/srujanaaytha1" target="_blank" class="about-link">
+                    <i class="ri-github-fill"></i>
+                </a>
+            </div>  
+
+        </div>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            
+            <h2>Connect with me</h2>
+              <p>Want to contact me for more details. Please DM me .</p>  
+
+                <input type="hidden" name="access_key" value="487d71c1-0baf-4927-84f1-9f92a942dca8">
+                <input placeholder="Your Name"  name="name" id="input1" required>
+                <input placeholder="Your Email" name="email" id="input2" required >
+                <textarea placeholder="Message" name="message" row="4" id="textarea"></textarea>
+                <button type="submit">Submit</button>
+                <br>
+                <a href="mailto:srujanaaytha1@gmail.com">Email me </a>
+            </div>
+        </form>
       </div>
 
 
